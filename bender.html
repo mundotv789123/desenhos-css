@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bender</title>
+  <style>
+    html,
+    body {
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* exibir os elementos */
+    /* div, div::before, div::after {
+      background: none !important;
+      border: solid 1px rgba(0, 0, 0, 0.5) !important;
+      outline: none !important;
+    } */
+
+    body {
+      display: flex;
+      background: linear-gradient(0deg, #919191, #ffffff);
+    }
+
+    .container {
+      margin: auto;
+    }
+
+    .antena {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: -8px;
+      z-index: -1;
+    }
+
+    .antena .ponta {
+      position: absolute;
+      margin: -100px 80px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: rgb(93, 130, 160);
+      border: solid 2px black;
+    }
+
+    .torre {
+      margin: -100px auto -100px auto;
+      display: flex;
+      width: 0;
+      height: 0;
+      background: transparent;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 100px solid black;
+    }
+
+    .torre::before {
+      content: "";
+      margin: 5px -15px;
+      width: 0;
+      height: 0;
+      background: transparent;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 92px solid rgb(93, 130, 160);
+    }
+
+    .antena .base {
+      margin: -15px 65px;
+      content: "";
+      width: 40px;
+      height: 10px;
+      border-radius: 50%;
+      position: absolute;
+      background-color: rgb(93, 130, 160);
+      border: solid 5px black;
+    }
+
+    .antena .torre .cor {
+      background-color: (93, 130, 160);
+      width: 100px;
+      height: 100px;
+      z-index: 100;
+    }
+
+    .cabeca {
+      width: 180px;
+      height: 325px;
+      border-radius: 120px 120px 0 0;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(90deg, rgb(81, 115, 143), rgb(93, 130, 160), rgb(81, 115, 143));
+      border: solid 6px black;
+    }
+
+    .olhos-modura {
+      margin: 100px -20px 0 -20px;
+      display: flex;
+      border-radius: 55px;
+      overflow: hidden;
+      border: solid 15px rgb(105, 147, 182);
+      background-color: black;
+      outline: solid 5px black;
+    }
+
+    .olhos {
+      display: flex;
+      margin: 0 auto;
+    }
+
+    .olho {
+      margin: 5px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      background-color: rgb(235, 235, 108);
+    }
+
+    .olho::after {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+      margin: auto auto 20px 10px;
+      background-color: black;
+      border-radius: 50%;
+    }
+
+    .boca {
+      margin: 20px 10px 0 10px;
+      border-radius: 50px;
+      overflow: hidden;
+      border: solid 5px black;
+      background-color: rgb(235, 235, 108);
+    }
+
+    .boca .linha {
+      display: flex;
+    }
+
+    .dente {
+      width: 30px;
+      height: 15px;
+      border: solid 1px black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="cabeca">
+      <div class="antena">
+        <div class="ponta"></div>
+        <div class="torre"></div>
+        <div class="base"></div>
+      </div>
+      <div class="olhos-modura">
+        <div class="olhos">
+          <div class="olho"></div>
+          <div class="olho"></div>
+        </div>
+      </div>
+      <div class="boca">
+        <div class="linha">
+          <div class="dente"></div>
+          <div class="dente"></div>
+          <div class="dente"></div>
+          <div class="dente"></div>
+          <div class="dente"></div>
+          <div class="dente"></div>
+          <div class="dente"></div>
+        </div>
+        <div class="linha">
+          <div class="dente"></div>
+          <div class="dente"></div>
+          <div class="dente"></div>
+          <div class="dente"></div>
+          <div class="dente"></div>
+          <div class="dente"></div>
+          <div class="dente"></div>
+        </div>
+        <div class="linha">
+          <div class="dente"></div>
+          <div class="dente"></div>
+          <div class="dente"></div>
+          <div class="dente"></div>
+          <div class="dente"></div>
+          <div class="dente"></div>
+          <div class="dente"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
